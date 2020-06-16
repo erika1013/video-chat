@@ -1,5 +1,5 @@
 import { Component, ElementRef, AfterViewInit, ViewChild, Input } from '@angular/core';
-import {OpentokService  } from "../../../../services/opentok.service";
+import { OpentokService } from "../../../../services/opentok.service copy";
 @Component({
   selector: 'app-publisher',
   templateUrl: './publisher.component.html',

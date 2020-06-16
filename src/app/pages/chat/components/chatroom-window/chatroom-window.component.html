@@ -9,11 +9,20 @@
 </div>
 
 <ng-template #chatMessages>
-  <app-chatroom-title-bar ></app-chatroom-title-bar>
+  <app-chatroom-title-bar [title]="chatroom"></app-chatroom-title-bar>
   <div class="message-wrapper h-100" #scrollContainer>
     <ng-container *ngFor="let message of messages">
       <app-chat-message [message]="message"></app-chat-message>
     </ng-container>
-  </div>
+  </div>  
+
   <app-chat-input></app-chat-input>
+
+  <div *ngIf="session">
+    <app-publisher class="w-15" [session]="session"></app-publisher>
+    <app-subscriber class="w-50" *ngFor="let stream of streams" [stream]="stream" [session]="session"></app-subscriber>
+  </div>
+
+  
+  
 </ng-template>

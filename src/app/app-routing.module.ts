@@ -6,6 +6,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 import { ChatComponent } from './pages/chat/chat.component';
+import { Sala1Component } from "./pages/salas/sala1/sala1.component";
 
 import { IsOwnerGuard } from './guards/is-owner.guard';
 
@@ -13,6 +14,8 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/login' },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'sala1', component: Sala1Component },
+  
   { path: 'chat', canActivate: [AuthGuard],
     children: [
       { path: '', component: ChatComponent },
@@ -24,6 +27,7 @@ const routes: Routes = [
   { path: '**', redirectTo: '/login' },
 
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

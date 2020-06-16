@@ -42,6 +42,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 import { PublisherComponent } from "./pages/chat/components/publisher/publisher.component";
 import { SubscriberComponent } from "./pages/chat/components/subscriber/subscriber.component";
+import { Sala1Component } from './pages/salas/sala1/sala1.component';
 
 
 @NgModule({
@@ -60,6 +61,8 @@ import { SubscriberComponent } from "./pages/chat/components/subscriber/subscrib
     EditProfileComponent,
     PublisherComponent,
     SubscriberComponent,
+    Sala1Component,
+    
 
   ],
   imports: [
